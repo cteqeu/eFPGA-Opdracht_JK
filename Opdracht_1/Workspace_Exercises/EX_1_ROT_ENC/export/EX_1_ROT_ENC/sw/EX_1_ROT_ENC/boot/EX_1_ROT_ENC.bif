@@ -1,0 +1,7 @@
+/*EX_1_ROT_ENC*/
+the_ROM_image:
+{
+  [bootloader]<EX_1_ROT_ENC/boot/fsbl.elf>
+   <bitstream> 
+  <elf,ps7_cortexa9_0>
+}

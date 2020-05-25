@@ -1,0 +1,47 @@
+#include "MatrixDecoderLib.h"
+
+void MessagDecoder(byte* Message, word BitStream[8])
+{
+    word Bit = 0;
+    for(byte i = 0; i < 8; i++)
+    {
+        for(byte j=0; j<8; j++)
+        {
+            switch(j)
+            {
+                case 0:
+                    Bit = (((Message[j]>>(7-i)) & 1) << 15);
+                    BitStream[i] = (BitStream[i] ^ Bit);
+                    break;
+                case 1:
+                    Bit = (((Message[j]>>(7-i)) & 1) << 14);
+                    BitStream[i] = (BitStream[i] ^ Bit);
+                    break;
+                case 2:
+                    Bit = (((Message[j]>>(7-i)) & 1) << 10);
+                    BitStream[i] = (BitStream[i] ^ Bit);
+                    break;
+                case 3:
+                    Bit = (((Message[j]>>(7-i)) & 1) << 4);
+                    BitStream[i] = (BitStream[i] ^ Bit);
+                    break;
+                case 4:
+                    Bit = (((Message[j]>>(7-i)) & 1) << 9);
+                    BitStream[i] = (BitStream[i] ^ Bit);
+                    break;
+                case 5:
+                    Bit = (((Message[j]>>(7-i)) & 1) << 2);
+                    BitStream[i] = (BitStream[i] ^ Bit);
+                    break;
+                case 6:
+                    Bit = (((Message[j]>>(7-i)) & 1) << 1);
+                    BitStream[i] = (BitStream[i] ^ Bit);
+                    break;
+                case 7:
+                    Bit = (((Message[j]>>(7-i)) & 1) << 12);
+                    BitStream[i] = (BitStream[i] ^ Bit);
+                    break;
+            }
+        }
+    }
+}

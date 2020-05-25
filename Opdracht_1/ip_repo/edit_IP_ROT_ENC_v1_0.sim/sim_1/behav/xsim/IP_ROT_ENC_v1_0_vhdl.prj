@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl   \
+"../../../../IP_ROT_ENC_1.0/hdl/IP_ROT_ENC_v1_0_S00_AXI.vhd" \
+"../../../../IP_ROT_ENC_1.0/hdl/IP_ROT_ENC_v1_0.vhd" \
+
+# Do not sort compile order
+nosort

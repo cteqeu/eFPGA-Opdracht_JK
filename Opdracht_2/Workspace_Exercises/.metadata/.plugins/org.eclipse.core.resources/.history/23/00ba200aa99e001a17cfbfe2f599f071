@@ -1,0 +1,162 @@
+#include "MatrixDecoderLib.h"
+#include <stdio.h>
+
+uint8_t* ReturnNumber(uint16_t LetterRequest)
+{
+
+  switch(LetterRequest)
+  {
+    case(0):
+    {
+      static uint8_t nul[8] = {0b00000000,
+                            0b00111100,
+                            0b00100100,
+                            0b00100100,
+                            0b00100100,
+                            0b00100100,
+                            0b00111100,
+                            0b00000000};
+      return nul;
+      break;
+    }
+
+    case(1):
+    {
+      static uint8_t een[8] = {0b00000000,
+                            0b00011000,
+                            0b00101000,
+                            0b00001000,
+                            0b00001000,
+                            0b00001000,
+                            0b00001000,
+                            0b00000000};
+      return een;
+      break;
+    }
+
+    case(2):
+    {
+      static uint8_t twee[8] = {0b00000000,
+                             0b01111000,
+                             0b01000100,
+                             0b00001000,
+                             0b00010000,
+                             0b00100000,
+                             0b01111100,
+                             0b00000000};
+      return twee;
+      break;
+    }
+
+    case(3):
+    {
+      static uint8_t drie[8] = {0b00000000,
+                             0b00111000,
+                             0b01000100,
+                             0b00001000,
+                             0b000001000,
+                             0b01000100,
+                             0b00111000,
+                             0b00000000};
+      return drie;
+      break;
+    }
+
+    case(4):
+    {
+      static uint8_t vier[8] = {0b00000000,
+                             0b01000100,
+                             0b01000100,
+                             0b01111100,
+                             0b00000100,
+                             0b00000100,
+                             0b00000100,
+                             0b00000000};
+      return vier;
+      break;
+    }
+
+    case(5):
+    {
+      static uint8_t vijf[8] = {0b00000000,
+                             0b00111110,
+                             0b00100000,
+                             0b00111110,
+                             0b00000010,
+                             0b00000010,
+                             0b00111100,
+                             0b00000000};
+      return vijf;
+      break;
+    }
+
+    case(6):
+    {
+      static uint8_t zes[8] = {0b00000000,
+                            0b00111100,
+                            0b00100000,
+                            0b00111100,
+                            0b00100100,
+                            0b00100100,
+                            0b00111100,
+                            0b00000000};
+      return zes;
+      break;
+    }
+
+    case(7):
+    {
+      static uint8_t zeven[8] = {0b00000000,
+                              0b00111100,
+                              0b00000100,
+                              0b00011110,
+                              0b00000100,
+                              0b00000100,
+                              0b00000100,
+                              0b00000000};
+      return zeven;
+      break;
+    }
+
+    case(8):
+    {
+      static uint8_t acht[8] = {0b00000000,
+                             0b01111100,
+                             0b01000100,
+                             0b01111100,
+                             0b01000100,
+                             0b01000100,
+                             0b01111100,
+                             0b00000000};
+      return acht;
+      break;
+    }
+
+    case(9):
+    {
+      static uint8_t negen[8] = {0b00000000,
+                             0b01111100,
+                             0b01000100,
+                             0b01111100,
+                             0b00000100,
+                             0b00000100,
+                             0b01111100,
+                             0b00000000};
+      return negen;
+      break;
+    }
+
+    default:
+    {
+      static uint8_t Heart[8] =  {0b01100110,
+                               0b10011001,
+                               0b10011001,
+                               0b10000001,
+                               0b01000010,
+                               0b00100100,
+                               0b00011000,
+                               0b00000000};
+      return Heart;
+    }
+  }
+}

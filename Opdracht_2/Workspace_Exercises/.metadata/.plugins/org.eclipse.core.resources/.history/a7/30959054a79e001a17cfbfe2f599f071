@@ -1,0 +1,5 @@
+#ifndef Numbers_h
+#define Numbers_h
+
+  byte* ReturnNumber(word LetterRequest);
+#endif

@@ -1,0 +1,79 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Mon May 25 13:26:08 2020
+| Host         : DESKTOP-8QCEB0E running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z007sclg225-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_IP_ROT_ENC_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_IP_ROT_ENC_0_0 (xilinx.com:user:IP_ROT_ENC:1.0) from (Rev. 7) to (Rev. 8)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Mon May 25 12:40:02 2020
+| Host         : DESKTOP-8QCEB0E running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z007sclg225-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_IP_ROT_ENC_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_IP_ROT_ENC_0_0 (xilinx.com:user:IP_ROT_ENC:1.0) from (Rev. 5) to (Rev. 7)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Mon May 25 12:22:15 2020
+| Host         : DESKTOP-8QCEB0E running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z007sclg225-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_IP_ROT_ENC_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_IP_ROT_ENC_0_0 (xilinx.com:user:IP_ROT_ENC:1.0) from (Rev. 4) to (Rev. 5)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Mon May 25 12:18:04 2020
+| Host         : DESKTOP-8QCEB0E running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z007sclg225-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_IP_ROT_ENC_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_IP_ROT_ENC_0_0 (xilinx.com:user:IP_ROT_ENC:1.0) from (Rev. 3) to (Rev. 4)
+

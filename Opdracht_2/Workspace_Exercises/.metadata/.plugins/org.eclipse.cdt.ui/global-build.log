@@ -1,0 +1,24 @@
+Nothing to build in platform 'EX_2_MATRIX'
+
+21:27:31 **** Incremental Build of configuration Debug for project EX_2_MATRIX_App ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/eFPGA/OPDRACHT_2/2/Workspace_Exercises/EX_2_MATRIX/export/EX_2_MATRIX/sw/EX_2_MATRIX/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: EX_2_MATRIX_App.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/eFPGA/OPDRACHT_2/2/Workspace_Exercises/EX_2_MATRIX/export/EX_2_MATRIX/sw/EX_2_MATRIX/standalone_domain/bsplib/lib -o "EX_2_MATRIX_App.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: EX_2_MATRIX_App.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size EX_2_MATRIX_App.elf  |tee "EX_2_MATRIX_App.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21044	   1144	  22568	  44756	   aed4	EX_2_MATRIX_App.elf
+'Finished building: EX_2_MATRIX_App.elf.size'
+' '

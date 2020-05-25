@@ -1,0 +1,162 @@
+#include "MatrixDecoderLib.h"
+
+
+uint_8* ReturnNumber(word LetterRequest)
+{
+
+  switch(LetterRequest)
+  {
+    case(0):
+    {
+      static byte nul[8] = {0b00000000,
+                            0b00111100,
+                            0b00100100,
+                            0b00100100,
+                            0b00100100,
+                            0b00100100,
+                            0b00111100,
+                            0b00000000};
+      return nul;
+      break;
+    }
+
+    case(1):
+    {
+      static byte een[8] = {0b00000000,
+                            0b00011000,
+                            0b00101000,
+                            0b00001000,
+                            0b00001000,
+                            0b00001000,
+                            0b00001000,
+                            0b00000000};
+      return een;
+      break;
+    }
+
+    case(2):
+    {
+      static byte twee[8] = {0b00000000,
+                             0b01111000,
+                             0b01000100,
+                             0b00001000,
+                             0b00010000,
+                             0b00100000,
+                             0b01111100,
+                             0b00000000};
+      return twee;
+      break;
+    }
+
+    case(3):
+    {
+      static byte drie[8] = {0b00000000,
+                             0b00111000,
+                             0b01000100,
+                             0b00001000,
+                             0b000001000,
+                             0b01000100,
+                             0b00111000,
+                             0b00000000};
+      return drie;
+      break;
+    }
+
+    case(4):
+    {
+      static byte vier[8] = {0b00000000,
+                             0b01000100,
+                             0b01000100,
+                             0b01111100,
+                             0b00000100,
+                             0b00000100,
+                             0b00000100,
+                             0b00000000};
+      return vier;
+      break;
+    }
+
+    case(5):
+    {
+      static byte vijf[8] = {0b00000000,
+                             0b00111110,
+                             0b00100000,
+                             0b00111110,
+                             0b00000010,
+                             0b00000010,
+                             0b00111100,
+                             0b00000000};
+      return vijf;
+      break;
+    }
+
+    case(6):
+    {
+      static byte zes[8] = {0b00000000,
+                            0b00111100,
+                            0b00100000,
+                            0b00111100,
+                            0b00100100,
+                            0b00100100,
+                            0b00111100,
+                            0b00000000};
+      return zes;
+      break;
+    }
+
+    case(7):
+    {
+      static byte zeven[8] = {0b00000000,
+                              0b00111100,
+                              0b00000100,
+                              0b00011110,
+                              0b00000100,
+                              0b00000100,
+                              0b00000100,
+                              0b00000000};
+      return zeven;
+      break;
+    }
+
+    case(8):
+    {
+      static byte acht[8] = {0b00000000,
+                             0b01111100,
+                             0b01000100,
+                             0b01111100,
+                             0b01000100,
+                             0b01000100,
+                             0b01111100,
+                             0b00000000};
+      return acht;
+      break;
+    }
+
+    case(9):
+    {
+      static byte negen[8] = {0b00000000,
+                             0b01111100,
+                             0b01000100,
+                             0b01111100,
+                             0b00000100,
+                             0b00000100,
+                             0b01111100,
+                             0b00000000};
+      return negen;
+      break;
+    }
+
+    default:
+    {
+      static byte Heart[8] =  {0b01100110,
+                               0b10011001,
+                               0b10011001,
+                               0b10000001,
+                               0b01000010,
+                               0b00100100,
+                               0b00011000,
+                               0b00000000};
+      return Heart;
+    }
+  }
+}

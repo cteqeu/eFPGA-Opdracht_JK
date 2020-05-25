@@ -1,0 +1,5 @@
+#ifndef Numbers_h
+#define Numbers_h
+
+  uint_8* ReturnNumber(uint_16 LetterRequest);
+#endif

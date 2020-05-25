@@ -1,0 +1,10 @@
+2020-05-25T15:24:39.361785100255-15:24:39 **** Incremental Build of configuration Debug for project EX_1_ROT_ENC_App ****
+000-make all 
+000-make --no-print-directory pre-build
+000-a9-linaro-pre-build-step
+000-' '
+000-make --no-print-directory main-build
+000-make[1]: Nothing to be done for 'main-build'.
+00255-
+15:24:39 Build Finished (took 513ms)
+

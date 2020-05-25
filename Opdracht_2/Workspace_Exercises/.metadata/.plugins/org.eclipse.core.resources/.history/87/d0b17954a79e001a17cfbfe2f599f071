@@ -1,0 +1,10 @@
+/*
+  MatrixEncoderLib.h - Library for encoding an 8x8 array of 1's & 0's to 8 word bitstreams, for the PXL Project.
+  Created by Kasper T. | March 21, 2019.
+*/
+
+#ifndef MatrixDecoderLib_h
+#define MatrixDecoderLib_h
+
+  void MessageDecoder(byte* Message, word BitStream[8]);
+#endif

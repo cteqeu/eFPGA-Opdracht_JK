@@ -1,0 +1,271 @@
+#include <stdio.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include "IP_MATRIX.h"
+#include "sleep.h"
+#include "xscugic.h"
+#include "xscutimer.h"
+
+//#include "Libs/MatrixDecoderLib.h"
+//#include "Libs/Numbers.h"
+
+#define bitRead(value, bit) (((value) >> (bit)) & 0x01)
+
+uint16_t bitStream[8];
+const uint16_t columns[8] = {0b1101011100010110, 0b1111011000010110, 0b1101011001010110, 0b1101111000010110, 0b1101011010010110, 0b1101011000110110, 0b1101011000010111, 0b1101011000011110}; //C1 C2 C3 C4 C5 C6 C7 C8
+
+uint8_t clock_picture[8] = {0b00000000,
+                            0b00111100,
+                            0b00100100,
+							0b00100100,
+							0b00100100,
+							0b00100100,
+							0b00111100,
+                            0b00000000};
+
+void displayData(uint16_t message);
+void encodeMessage();
+uint8_t* ReturnNumber(uint16_t LetterRequest);
+void MessageDecoder(uint8_t* Message, uint16_t BitStream[8]);
+
+int main()
+{
+	init_platform();
+
+    while(1)
+    {
+    	MessageDecoder(clock_picture, bitStream);
+    	encodeMessage();
+    	//mtrxClear();
+    }
+    cleanup_platform();
+    return 0;
+}
+
+void displayData(uint16_t message)
+{
+  for (int i = 0; i <= 15; i++)
+  {
+   	IP_MATRIX_mWriteReg(XPAR_IP_MATRIX_0_S00_AXI_BASEADDR,IP_MATRIX_S00_AXI_SLV_REG0_OFFSET, bitRead(message, i));
+   	printf("%d\n", bitRead(message, i));
+   	sleep_A9(1);
+  }
+}
+
+void encodeMessage()
+{
+  for (int j = 0; j < 8; j++)
+  {
+    displayData(~bitStream[j] & columns[j]);
+    usleep_A9(15);
+  }
+}
+
+void MessageDecoder(uint8_t* Message, uint16_t BitStream[8])
+{
+    uint16_t Bit = 0;
+    for(uint8_t i = 0; i < 8; i++)
+    {
+        for(uint8_t j=0; j<8; j++)
+        {
+            switch(j)
+            {
+                case 0:
+                    Bit = (((Message[j]>>(7-i)) & 1) << 15);
+                    BitStream[i] = (BitStream[i] ^ Bit);
+                    break;
+                case 1:
+                    Bit = (((Message[j]>>(7-i)) & 1) << 14);
+                    BitStream[i] = (BitStream[i] ^ Bit);
+                    break;
+                case 2:
+                    Bit = (((Message[j]>>(7-i)) & 1) << 10);
+                    BitStream[i] = (BitStream[i] ^ Bit);
+                    break;
+                case 3:
+                    Bit = (((Message[j]>>(7-i)) & 1) << 4);
+                    BitStream[i] = (BitStream[i] ^ Bit);
+                    break;
+                case 4:
+                    Bit = (((Message[j]>>(7-i)) & 1) << 9);
+                    BitStream[i] = (BitStream[i] ^ Bit);
+                    break;
+                case 5:
+                    Bit = (((Message[j]>>(7-i)) & 1) << 2);
+                    BitStream[i] = (BitStream[i] ^ Bit);
+                    break;
+                case 6:
+                    Bit = (((Message[j]>>(7-i)) & 1) << 1);
+                    BitStream[i] = (BitStream[i] ^ Bit);
+                    break;
+                case 7:
+                    Bit = (((Message[j]>>(7-i)) & 1) << 12);
+                    BitStream[i] = (BitStream[i] ^ Bit);
+                    break;
+            }
+        }
+    }
+}
+
+uint8_t* ReturnNumber(uint16_t LetterRequest)
+{
+
+  switch(LetterRequest)
+  {
+    case(0):
+    {
+      static uint8_t nul[8] = {0b00000000,
+                            0b00111100,
+                            0b00100100,
+                            0b00100100,
+                            0b00100100,
+                            0b00100100,
+                            0b00111100,
+                            0b00000000};
+      return nul;
+      break;
+    }
+
+    case(1):
+    {
+      static uint8_t een[8] = {0b00000000,
+                            0b00011000,
+                            0b00101000,
+                            0b00001000,
+                            0b00001000,
+                            0b00001000,
+                            0b00001000,
+                            0b00000000};
+      return een;
+      break;
+    }
+
+    case(2):
+    {
+      static uint8_t twee[8] = {0b00000000,
+                             0b01111000,
+                             0b01000100,
+                             0b00001000,
+                             0b00010000,
+                             0b00100000,
+                             0b01111100,
+                             0b00000000};
+      return twee;
+      break;
+    }
+
+    case(3):
+    {
+      static uint8_t drie[8] = {0b00000000,
+                             0b00111000,
+                             0b01000100,
+                             0b00001000,
+                             0b000001000,
+                             0b01000100,
+                             0b00111000,
+                             0b00000000};
+      return drie;
+      break;
+    }
+
+    case(4):
+    {
+      static uint8_t vier[8] = {0b00000000,
+                             0b01000100,
+                             0b01000100,
+                             0b01111100,
+                             0b00000100,
+                             0b00000100,
+                             0b00000100,
+                             0b00000000};
+      return vier;
+      break;
+    }
+
+    case(5):
+    {
+      static uint8_t vijf[8] = {0b00000000,
+                             0b00111110,
+                             0b00100000,
+                             0b00111110,
+                             0b00000010,
+                             0b00000010,
+                             0b00111100,
+                             0b00000000};
+      return vijf;
+      break;
+    }
+
+    case(6):
+    {
+      static uint8_t zes[8] = {0b00000000,
+                            0b00111100,
+                            0b00100000,
+                            0b00111100,
+                            0b00100100,
+                            0b00100100,
+                            0b00111100,
+                            0b00000000};
+      return zes;
+      break;
+    }
+
+    case(7):
+    {
+      static uint8_t zeven[8] = {0b00000000,
+                              0b00111100,
+                              0b00000100,
+                              0b00011110,
+                              0b00000100,
+                              0b00000100,
+                              0b00000100,
+                              0b00000000};
+      return zeven;
+      break;
+    }
+
+    case(8):
+    {
+      static uint8_t acht[8] = {0b00000000,
+                             0b01111100,
+                             0b01000100,
+                             0b01111100,
+                             0b01000100,
+                             0b01000100,
+                             0b01111100,
+                             0b00000000};
+      return acht;
+      break;
+    }
+
+    case(9):
+    {
+      static uint8_t negen[8] = {0b00000000,
+                             0b01111100,
+                             0b01000100,
+                             0b01111100,
+                             0b00000100,
+                             0b00000100,
+                             0b01111100,
+                             0b00000000};
+      return negen;
+      break;
+    }
+
+    default:
+    {
+      static uint8_t Heart[8] =  {0b01100110,
+                               0b10011001,
+                               0b10011001,
+                               0b10000001,
+                               0b01000010,
+                               0b00100100,
+                               0b00011000,
+                               0b00000000};
+      return Heart;
+    }
+  }
+}
+
+
+

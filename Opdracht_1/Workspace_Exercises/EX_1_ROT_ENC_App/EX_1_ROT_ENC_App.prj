@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="EX_1_ROT_ENC_App" location="C:/eFPGA/OPDRACHT_2/Workspace_Exercises/EX_1_ROT_ENC_App" platform="C:/eFPGA/OPDRACHT_2/Workspace_Exercises/EX_1_ROT_ENC/export/EX_1_ROT_ENC/EX_1_ROT_ENC.xpfm" platformUID="xilinx:minized::0.0(custom)" systemProject="EX_1_ROT_ENC_App_system" sysConfig="EX_1_ROT_ENC" runtime="C/C++" cpu="standalone_domain" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="5d33a880a9e017fcf2d00d5158626e43">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.782976171">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.587140070" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

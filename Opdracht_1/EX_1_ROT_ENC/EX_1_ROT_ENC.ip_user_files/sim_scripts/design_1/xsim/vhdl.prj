@@ -1,0 +1,9 @@
+vhdl xil_defaultlib  \
+"../../../bd/design_1/ipshared/b700/hdl/IP_ROT_ENC_v1_0_S00_AXI.vhd" \
+"../../../bd/design_1/ipshared/b700/hdl/IP_Rotary.vhd" \
+"../../../bd/design_1/ipshared/b700/hdl/IP_ROT_ENC_v1_0.vhd" \
+"../../../bd/design_1/ip/design_1_IP_ROT_ENC_0_0_1/sim/design_1_IP_ROT_ENC_0_0.vhd" \
+"../../../bd/design_1/ip/design_1_rst_ps7_0_50M_0_1/sim/design_1_rst_ps7_0_50M_0.vhd" \
+"../../../bd/design_1/sim/design_1.vhd" \
+
+nosort

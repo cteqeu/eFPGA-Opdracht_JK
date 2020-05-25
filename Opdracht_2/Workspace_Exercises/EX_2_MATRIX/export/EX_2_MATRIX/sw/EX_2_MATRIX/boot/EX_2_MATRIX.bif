@@ -1,0 +1,7 @@
+/*EX_2_MATRIX*/
+the_ROM_image:
+{
+  [bootloader]<EX_2_MATRIX/boot/fsbl.elf>
+   <bitstream> 
+  <elf,ps7_cortexa9_0>
+}
